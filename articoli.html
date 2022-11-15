@@ -32,10 +32,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active text-dark"  aria-current="page" href="home.html">Login</a>
+                            <a class="nav-link active text-dark" id="loginNav"  aria-current="page" href="log.html">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="home.html">Registrati</a>
+                            <a class="nav-link text-dark" id="benvenuto" href="log.html">Registrati</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active text-dark" aria-current="page" href="profilo.html"><i
@@ -58,16 +58,17 @@
     </header>
 
     <main>
-        <div class="card m-3">
+        <div  class="card m-3">
             <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="..." class="img-fluid rounded-start">
+                <div id="immagine" class="col-md-4">
+                  
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Stai guardando </h5>
-                        <p class="card-text">Descrizione: </p>
-                        <p class="card-text"><small class="text-muted">Prezzo: € </small></p>
+                        <h5 class="card-title" id="sguardo">Stai guardando </h5>
+                        <p class="card-text" id="descrizione">Descrizione: </p>
+                        <p class="card-text" id="prezzo"><small class="text-muted">Prezzo: € </small></p>
+                        <button type="button" id="compra" class="btn btn-warning">Aggiungi al carrello</button>
                     </div>
                 </div>
             </div>

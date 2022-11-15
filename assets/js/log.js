@@ -64,7 +64,7 @@ function clearForm() {
 
 // LOGIN
 
-var utente = new Utente("", "", "", "");
+var utente = new Utente("", "", "", "");//nuovo oggetto con valori non definiti
 var utenti;
 function logIn() {
   var btnEnter = document.getElementById("entra"); //btn per il form login
@@ -89,14 +89,9 @@ function logIn() {
   });
 }
 
-function entra() {
+function entra() {//al momento del click del log in l'utente si troverà nella pagina home e i suoi dati sono salvati nel localstorage
   //funzione che parte se il login ha successo
-  /*utenteLog = {
-        
-        nome: utente.nome,
-        cognome: utente.cognome,
-        email: utente.email
-    };*/
+  
   if (!localStorage.getItem(utente.nome)) {
     localStorage.setItem("nome", utente.nome);
   }
