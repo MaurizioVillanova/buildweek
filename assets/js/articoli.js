@@ -3,6 +3,7 @@ var dettaglioarticoli = localStorage.key['titolo'];
  var descrizione = localStorage.key ['descrizione']
  var prezzo = localStorage.key ['prezzo']
  var utente = localStorage.key['nome'];
+ var carrello = [];
 
 function dettaglio(){
     if(localStorage.getItem("titolo")){//con questo if viene applicato il logout dopo aver effettuato l'accesso
@@ -31,8 +32,36 @@ function accesso(){
         });
     }
     }
-    function aggiungicarrello(){
-document.getElementById('compra').addEventListener('click', function (){
-   if(localStorage.getItem('prezzo'))
-})
+   
+
+    class Carrello {
+        constructor(_idUtente, _arrayArticoli = []) {
+            this.idUtente = _idUtente;
+            this.arrayArticoli = _arrayArticoli;
+        }
     }
+    
+    function aggiungiCarrello() {
+        var arrayCarrello = [];
+        var articoloCarrello = {
+            location: localStorage.getItem("immagine", immagine),
+            nome: localStorage.getItem("titolo", dettaglioarticoli),
+            prezzo: localStorage.getItem("prezzo", prezzo)
+        }
+        arrayCarrello.push(articoloCarrello);
+        var carrelloUtente = new Carrello(localStorage.getItem("nome", utente), arrayCarrello);
+    
+        newCarrello(carrelloUtente);
+    }
+    
+    
+    async function newCarrello(carrelloUtente) {
+        let response = await fetch("http://localhost:3000/carrello", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify(carrelloUtente),
+        });
+      }
+    

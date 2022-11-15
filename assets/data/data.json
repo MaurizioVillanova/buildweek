@@ -1,6 +1,6 @@
 {
   "utenti": [
-    { 
+    {
       "nome": "M",
       "cognome": "L",
       "email": "ml@gmail.com",
@@ -138,9 +138,15 @@
   ],
   "carrello": [
     {
-      "idCarrello": "",
-      "idUtente": "",
-      "arrayArticoli": []
+      "idUtente": "Maurizio",
+      "arrayArticoli": [
+        {
+          "location": "assets/img/tabletapple.jpg",
+          "nome": "2022 Apple iPad Air (Wi-Fi, 64GB) - Grigio siderale (5a Generazione)",
+          "prezzo": "699"
+        }
+      ],
+      "id": 1
     }
   ]
 }
