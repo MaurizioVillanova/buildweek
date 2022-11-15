@@ -41,6 +41,27 @@
       "email": "ec@gmail.com",
       "password": "ec123",
       "id": 6
+    },
+    {
+      "nome": "Maurizio",
+      "cognome": "Villanova",
+      "email": "mauriziovillanova5@gmail.com",
+      "password": "ciao",
+      "id": 7
+    },
+    {
+      "nome": "pingo",
+      "cognome": "pallino",
+      "email": "ping@gmail.com",
+      "password": "ciao",
+      "id": 8
+    },
+    {
+      "nome": "ewe",
+      "cognome": "lina",
+      "email": "ewe@gmail.com",
+      "password": "ciao",
+      "id": 9
     }
   ],
   "articoli": [

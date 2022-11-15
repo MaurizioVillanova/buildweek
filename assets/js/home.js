@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', getData());
 var articoli = [];
-
+var utente = localStorage.key(0);
 function getData() {
     fetch('http://localhost:3000/articoli').then((response) => {
         return response.json();
@@ -21,3 +21,16 @@ function getData() {
         })
     })
 }
+if(localStorage.getItem('nome')){
+    document.getElementById('loginNav').innerText = 'Logout';
+   
+    document.getElementById('benvenuto').innerHTML = `<a href =#  class="text-decoration-none  text-dark" > Benvenuto/a ${localStorage.getItem("nome", utente.nome)}</a>`;
+    document.getElementById('loginNav').addEventListener('click', function (){
+        localStorage.clear();
+    location.href = 'log.html'
+    });
+}
+ /*function esci(){
+    localStorage.clear();
+    location.href = 'log.html'
+}*/
