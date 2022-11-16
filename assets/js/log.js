@@ -35,7 +35,7 @@ function registra() {
     };
     if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(emailReg.value)) {
       //validazione RegEx
-      addUsers(dati);
+      addUsers(dati).then((u)=>{creaCarrello(u)});//dopo che avrà finito eseguirà la funzione creaCarrello altrimenti usa await(funzione asincrona sincrona funzione fetch) then (asincrona/promise)
     } else {
       alert("Inserisci una email valida");
     }
@@ -52,6 +52,7 @@ async function addUsers(dati) {
     body: JSON.stringify(dati),
   });
   clearForm();
+  return dati.nome;// u nella freccia then
 }
 
 function clearForm() {
@@ -98,3 +99,29 @@ function entra() {//al momento del click del log in l'utente si troverà nella p
   location.href = "home.html";
   console.log(utente);
 }
+class Carrello {//classe per raccogliere gli elementi del carrello
+    constructor(_idUtente, _arrayArticoli = []) {
+        this.idUtente = _idUtente;
+        this.arrayArticoli = _arrayArticoli;
+    }
+}
+
+    function creaCarrello(u) {//funzione per aggiungere gli elemnti del carrello nel localstorage
+        var arrayCarrello = [];
+        var carrelloUtente = new Carrello(u, arrayCarrello);
+        newCarrello(carrelloUtente);//carrello in base al nome dell'utente
+    }
+    async function newCarrello(carrelloUtente) {//dal localstorage gli passa al json//aggiunta nuovo carrello
+        let response = await fetch("http://localhost:3000/carrello", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify(carrelloUtente),
+        });
+      }
+
+
+
+
+//put sul carrello

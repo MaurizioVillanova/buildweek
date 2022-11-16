@@ -34,28 +34,29 @@ function accesso(){
     }
    
 
-    class Carrello {
+    class Carrello {//classe per raccogliere gli elementi del carrello
         constructor(_idUtente, _arrayArticoli = []) {
             this.idUtente = _idUtente;
             this.arrayArticoli = _arrayArticoli;
         }
     }
     
-    function aggiungiCarrello() {
+    function aggiungiCarrello() {//funzione per aggiungere gli elemnti del carrello nel localstorage
         var arrayCarrello = [];
         var articoloCarrello = {
-            location: localStorage.getItem("immagine", immagine),
-            nome: localStorage.getItem("titolo", dettaglioarticoli),
-            prezzo: localStorage.getItem("prezzo", prezzo)
+            location: localStorage.getItem("immagine"),
+            nome: localStorage.getItem("titolo"),
+            prezzo: localStorage.getItem("prezzo")
         }
+       
         arrayCarrello.push(articoloCarrello);
-        var carrelloUtente = new Carrello(localStorage.getItem("nome", utente), arrayCarrello);
-    
+        var carrelloUtente = new Carrello(localStorage.getItem("nome"), arrayCarrello);
+
         newCarrello(carrelloUtente);
     }
     
     
-    async function newCarrello(carrelloUtente) {
+    /*async function newCarrello(carrelloUtente) {//dal localstorage gli passa al json
         let response = await fetch("http://localhost:3000/carrello", {
           method: "POST",
           headers: {
@@ -64,4 +65,12 @@ function accesso(){
           body: JSON.stringify(carrelloUtente),
         });
       }
-    
+      /*async function setCarrello(carrelloUtente, id) {//dal localstorage gli passa al json
+        let response = await fetch("http://localhost:3000/carrello"+ id, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify(carrelloUtente),
+        });
+      }*/

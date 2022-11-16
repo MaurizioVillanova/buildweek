@@ -62,6 +62,13 @@
       "email": "ewe@gmail.com",
       "password": "ciao",
       "id": 9
+    },
+    {
+      "nome": "marta",
+      "cognome": "scuncio",
+      "email": "martascuncio@gmail.com",
+      "password": "ciao",
+      "id": 10
     }
   ],
   "articoli": [
@@ -147,6 +154,44 @@
         }
       ],
       "id": 1
+    },
+    {
+      "idUtente": "Maurizio",
+      "arrayArticoli": [
+        {
+          "location": "assets/img/pc.jpg",
+          "nome": "EXTREMEBIT PC Computer Desktop Assemblato Intel i7-12700 Ram 16GB SSD 500GB Windows 10 Pro",
+          "prezzo": "770"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "idUtente": "marta",
+      "arrayArticoli": [],
+      "id": 3
+    },
+    {
+      "idUtente": "marta",
+      "arrayArticoli": [
+        {
+          "location": "assets/img/tabletapple.jpg",
+          "nome": "2022 Apple iPad Air (Wi-Fi, 64GB) - Grigio siderale (5a Generazione)",
+          "prezzo": "699"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "idUtente": "marta",
+      "arrayArticoli": [
+        {
+          "location": "assets/img/tabletapple.jpg",
+          "nome": "2022 Apple iPad Air (Wi-Fi, 64GB) - Grigio siderale (5a Generazione)",
+          "prezzo": "699"
+        }
+      ],
+      "id": 5
     }
   ]
 }
