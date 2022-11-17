@@ -1,74 +1,18 @@
 {
   "utenti": [
     {
-      "nome": "M",
-      "cognome": "L",
-      "email": "ml@gmail.com",
-      "password": "ml123",
-      "id": 1
-    },
-    {
-      "nome": "M",
-      "cognome": "V",
-      "email": "mv@gmail.com",
-      "password": "mv123",
-      "id": 2
-    },
-    {
-      "nome": "F",
-      "cognome": "L",
-      "email": "fl@gmail.com",
-      "password": "fl123",
-      "id": 3
-    },
-    {
-      "nome": "G",
-      "cognome": "T",
-      "email": "gt@gmail.com",
-      "password": "gt123",
-      "id": 4
-    },
-    {
-      "nome": "M",
-      "cognome": "B",
-      "email": "mb@gmail.com",
-      "password": "mb123",
-      "id": 5
-    },
-    {
-      "nome": "E",
-      "cognome": "C",
-      "email": "ec@gmail.com",
-      "password": "ec123",
-      "id": 6
-    },
-    {
       "nome": "Maurizio",
       "cognome": "Villanova",
       "email": "mauriziovillanova5@gmail.com",
       "password": "ciao",
-      "id": 7
+      "id": 1
     },
     {
       "nome": "pingo",
       "cognome": "pallino",
       "email": "ping@gmail.com",
       "password": "ciao",
-      "id": 8
-    },
-    {
-      "nome": "ewe",
-      "cognome": "lina",
-      "email": "ewe@gmail.com",
-      "password": "ciao",
-      "id": 9
-    },
-    {
-      "nome": "marta",
-      "cognome": "scuncio",
-      "email": "martascuncio@gmail.com",
-      "password": "ciao",
-      "id": 10
+      "id": 2
     }
   ],
   "articoli": [
@@ -145,53 +89,9 @@
   ],
   "carrello": [
     {
-      "idUtente": "Maurizio",
-      "arrayArticoli": [
-        {
-          "location": "assets/img/tabletapple.jpg",
-          "nome": "2022 Apple iPad Air (Wi-Fi, 64GB) - Grigio siderale (5a Generazione)",
-          "prezzo": "699"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "idUtente": "Maurizio",
-      "arrayArticoli": [
-        {
-          "location": "assets/img/pc.jpg",
-          "nome": "EXTREMEBIT PC Computer Desktop Assemblato Intel i7-12700 Ram 16GB SSD 500GB Windows 10 Pro",
-          "prezzo": "770"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "idUtente": "marta",
+      "idUtente": "pingo",
       "arrayArticoli": [],
-      "id": 3
-    },
-    {
-      "idUtente": "marta",
-      "arrayArticoli": [
-        {
-          "location": "assets/img/tabletapple.jpg",
-          "nome": "2022 Apple iPad Air (Wi-Fi, 64GB) - Grigio siderale (5a Generazione)",
-          "prezzo": "699"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "idUtente": "marta",
-      "arrayArticoli": [
-        {
-          "location": "assets/img/tabletapple.jpg",
-          "nome": "2022 Apple iPad Air (Wi-Fi, 64GB) - Grigio siderale (5a Generazione)",
-          "prezzo": "699"
-        }
-      ],
-      "id": 5
+      "id": 1
     }
   ]
 }
