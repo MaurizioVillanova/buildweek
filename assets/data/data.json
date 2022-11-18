@@ -1,6 +1,12 @@
 {
   "utenti": [
-    
+    {
+      "nome": "Mario",
+      "cognome": "Rossi",
+      "email": "rossi@gmail.com",
+      "password": "ciao",
+      "id": 1
+    }
   ],
   "articoli": [
     {
@@ -75,6 +81,9 @@
     }
   ],
   "carrello": [
-    
+    {
+      "0": null,
+      "id": 1
+    }
   ]
 }
