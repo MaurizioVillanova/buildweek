@@ -35,7 +35,7 @@ function accesso(){//funzione del log out
 }
 
 
-function addProd() {//funzione per aggiungere gli elemnti del carrello nel localstorage
+function addProd() {//funzione per caricare gli elemnti del carrello nel localstorage quando si carica la pagina 
   var idUser = localStorage.getItem("nome");
 
   fetch("http://localhost:3000/carrello?idUtente=" + idUser) //recupera i dati dal JSON dell'utente
@@ -50,26 +50,33 @@ function addProd() {//funzione per aggiungere gli elemnti del carrello nel local
 
 
 function aggiungiCarrello() {//legge i valori dell'array nel local storage
+  console.log(carrello, articoloCarrello);
   var carrello = JSON.parse(localStorage.getItem('carrello'));
 
  
-  var articoloCarrello = localStorage.getItem("idArticolo");
+  var articoloCarrello = localStorage.getItem("IdArticolo");
     
   
   carrello.push(articoloCarrello);//push articolo dentro l'array
+  console.log(carrello, articoloCarrello);
   localStorage.setItem('carrello', JSON.stringify(carrello));//li mette nel local storage
-  updateCarrello();
+  updateCarrello(carrello);//parametro al carrello
 }
 
 
 function updateCarrello(carrello) {//dal localstorage gli passa al json
 var id = localStorage.getItem('idCarrello');
+let bbc =   {//abbiamo richiamato le proprietà da attribuire all'oggetto nel put quello che vogliamo leggere nell'array del carrello
+  idUtente: localStorage.getItem('nome'),
+  arrayArticoli: carrello ,
+}
+
 
   fetch("http://localhost:3000/carrello/" + id, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json;charset=utf-8",
     },
-    body: localStorage.getItem('carrello')
+    body: JSON.stringify(bbc)
   });
 }

@@ -1,11 +1,18 @@
 {
   "utenti": [
     {
-      "nome": "Mario",
-      "cognome": "Rossi",
-      "email": "rossi@gmail.com",
+      "nome": "Maurizio",
+      "cognome": "Villanova",
+      "email": "mauriziovillanova5@gmail.com",
       "password": "ciao",
       "id": 1
+    },
+    {
+      "nome": "pingo",
+      "cognome": "pallinos",
+      "email": "ping@gmail.com",
+      "password": "ciao",
+      "id": 2
     }
   ],
   "articoli": [
@@ -82,8 +89,20 @@
   ],
   "carrello": [
     {
-      "0": null,
+      "idUtente": "Maurizio",
+      "arrayArticoli": [
+        "1",
+        "3"
+      ],
       "id": 1
+    },
+    {
+      "idUtente": "pingo",
+      "arrayArticoli": [
+        "1",
+        "5"
+      ],
+      "id": 2
     }
   ]
 }
