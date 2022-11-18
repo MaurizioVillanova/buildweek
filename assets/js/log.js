@@ -16,7 +16,7 @@ function init() {
   logIn(); //al click del login
 }
 
-// REGISTRAZIONE
+// REGISTRAZIONE crea utenti e un carrelli associati agli utenti nel json
 
 function registra() {
   var btnAdd = document.getElementById("registra"); //btn per il form registrazione
@@ -69,12 +69,12 @@ class Carrello {//classe per raccogliere gli elementi del carrello
   }
 }
 
-  function creaCarrello(u) {//funzione per aggiungere gli elemnti del carrello nel localstorage
+  function creaCarrello(u) {//funzione per aggiungere gli elemnti del carrello 
       var arrayCarrello = [];
       var carrelloUtente = new Carrello(u, arrayCarrello);
       newCarrello(carrelloUtente);//carrello in base al nome dell'utente
   }
-  async function newCarrello(carrelloUtente) {//dal localstorage gli passa al json//aggiunta nuovo carrello
+  async function newCarrello(carrelloUtente) {// gli passa carrello al json
       let response = await fetch("http://localhost:3000/carrello", {
         method: "POST",
         headers: {
@@ -127,4 +127,3 @@ function entra() {//al momento del click del log in l'utente si troverà nella p
  
 }
 
-//put sul carrello

@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', getData(), accesso());
 var articoli = [];
 var utente = localStorage.key['nome'];
 function getData() {
-    fetch('http://localhost:3000/articoli').then((response) => {
+    fetch('http://localhost:3000/articoli').then((response) => {//funzione get che riporta dal json articoli alla home page sotto forma di card
         return response.json();
         //il json che ritorna viene scritto in data come rappresentazione che sarà poi riportato nell'array elenco 
     }).then((data) => {
@@ -21,7 +21,7 @@ function getData() {
         })
     })
 }
-function accesso(){
+function accesso(){//funzione del log out
 if(localStorage.getItem('nome')){//con questo if viene applicato il logout dopo aver effettuato l'accesso
     document.getElementById('loginNav').innerText = 'Logout';
    
@@ -34,13 +34,14 @@ if(localStorage.getItem('nome')){//con questo if viene applicato il logout dopo 
 }
 }
 
-function myFunction(index){
+function myFunction(index){// al momento el click su una card passa i dati dell'articolo al local storage e manda alla pagina articoli
    
     if (!localStorage.getItem(articoli[index].nome,articoli[index].descrizione, articoli[index].prezzo, articoli[index].location )) {
         localStorage.setItem("titolo", articoli[index].nome);
         localStorage.setItem("descrizione", articoli[index].descrizione);
         localStorage.setItem("prezzo", articoli[index].prezzo);
         localStorage.setItem("immagine", articoli[index].location);
+        localStorage.setItem("IdArticolo", articoli[index].idArticolo);
     }
-    location.href = "articoli.html"
+    location.href = "articoli.html";
 } 
