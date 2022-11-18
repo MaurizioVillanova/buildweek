@@ -1,19 +1,6 @@
 {
   "utenti": [
-    {
-      "nome": "Maurizio",
-      "cognome": "Villanova",
-      "email": "mauriziovillanova5@gmail.com",
-      "password": "ciao",
-      "id": 1
-    },
-    {
-      "nome": "pingo",
-      "cognome": "pallino",
-      "email": "ping@gmail.com",
-      "password": "ciao",
-      "id": 2
-    }
+    
   ],
   "articoli": [
     {
@@ -88,10 +75,6 @@
     }
   ],
   "carrello": [
-    {
-      "idUtente": "pingo",
-      "arrayArticoli": [],
-      "id": 1
-    }
+    
   ]
 }
