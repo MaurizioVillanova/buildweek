@@ -61,6 +61,7 @@ function aggiungiCarrello() {//legge i valori dell'array nel local storage
   console.log(carrello, articoloCarrello);
   localStorage.setItem('carrello', JSON.stringify(carrello));//li mette nel local storage
   updateCarrello(carrello);//parametro al carrello
+  alert("L'articolo è stato aggiunto al carrello");
 }
 
 

@@ -33,12 +33,13 @@ function registra() {
       email: emailReg.value,
       password: passReg.value,
     };
-    if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(emailReg.value)) {
+    if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(emailReg.value) && /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$/.test(passReg.value)) {
       //validazione RegEx
       addUsers(dati).then((u)=>{creaCarrello(u)});//dopo che avrà finito eseguirà la funzione creaCarrello altrimenti usa await(funzione asincrona sincrona funzione fetch) then (asincrona/promise)
     } else {
-      alert("Inserisci una email valida");
+      alert("Inserisci una email e una password valida");
     }
+    
   });
 }
 

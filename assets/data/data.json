@@ -6,20 +6,6 @@
       "email": "mauriziovillanova5@gmail.com",
       "password": "ciao",
       "id": 1
-    },
-    {
-      "nome": "pingo",
-      "cognome": "pallinos",
-      "email": "ping@gmail.com",
-      "password": "ciao",
-      "id": 2
-    },
-    {
-      "nome": "Marta",
-      "cognome": "Liguori",
-      "email": "martaliguori@gmail.com",
-      "password": "ciao",
-      "id": 3
     }
   ],
   "articoli": [
@@ -99,25 +85,13 @@
       "idUtente": "Maurizio",
       "arrayArticoli": [
         "1",
-        "3"
+        "10",
+        "7",
+        "3",
+        "1",
+        "1"
       ],
       "id": 1
-    },
-    {
-      "idUtente": "pingo",
-      "arrayArticoli": [
-        "1",
-        "5"
-      ],
-      "id": 2
-    },
-    {
-      "idUtente": "Marta",
-      "arrayArticoli": [
-        "1",
-        "6"
-      ],
-      "id": 3
     }
   ]
 }

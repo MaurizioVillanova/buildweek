@@ -24,7 +24,8 @@ function getData() {
 function accesso(){//funzione del log out
 if(localStorage.getItem('nome')){//con questo if viene applicato il logout dopo aver effettuato l'accesso
     document.getElementById('loginNav').innerText = 'Logout';
-   
+    document.getElementById('profNav').innerHTML = `<a class="nav-link active text-dark"  aria-current="page" href="profilo.html"><i class="bi bi-person-fill"></i></a>`;
+    document.getElementById('carrNav').innerHTML = `<a class="nav-link active text-dark"  aria-current="page" href="profilo.html"><i class="bi bi-cart-fill"></i></a>`;
     document.getElementById('benvenuto').innerHTML = `<a href =#  class="text-decoration-none  text-dark" > Benvenuto/a ${localStorage.getItem("nome", utente)}</a>`;
     document.getElementById('loginNav').addEventListener('click', function (){
         localStorage.clear();
