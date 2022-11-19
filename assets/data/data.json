@@ -13,6 +13,13 @@
       "email": "ping@gmail.com",
       "password": "ciao",
       "id": 2
+    },
+    {
+      "nome": "Marta",
+      "cognome": "Liguori",
+      "email": "martaliguori@gmail.com",
+      "password": "ciao",
+      "id": 3
     }
   ],
   "articoli": [
@@ -103,6 +110,14 @@
         "5"
       ],
       "id": 2
+    },
+    {
+      "idUtente": "Marta",
+      "arrayArticoli": [
+        "1",
+        "6"
+      ],
+      "id": 3
     }
   ]
 }
