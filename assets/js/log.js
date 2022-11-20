@@ -16,7 +16,7 @@ function init() {
   logIn(); //al click del login
 }
 
-// REGISTRAZIONE crea utenti e un carrelli associati agli utenti nel json
+// REGISTRAZIONE
 
 function registra() {
   var btnAdd = document.getElementById("registra"); //btn per il form registrazione
@@ -33,13 +33,12 @@ function registra() {
       email: emailReg.value,
       password: passReg.value,
     };
-    if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(emailReg.value) && /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$/.test(passReg.value)) {
+    if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(emailReg.value) && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(passReg.value)) {
       //validazione RegEx
       addUsers(dati).then((u)=>{creaCarrello(u)});//dopo che avrà finito eseguirà la funzione creaCarrello altrimenti usa await(funzione asincrona sincrona funzione fetch) then (asincrona/promise)
     } else {
       alert("Inserisci una email e una password valida");
     }
-    
   });
 }
 
@@ -51,7 +50,7 @@ async function addUsers(dati) {
       "Content-Type": "application/json;charset=utf-8",
     },
     body: JSON.stringify(dati),
-  });
+  }); console.log('ciao')
   clearForm();
   return dati.nome;// u nella freccia then
 }
@@ -70,12 +69,12 @@ class Carrello {//classe per raccogliere gli elementi del carrello
   }
 }
 
-  function creaCarrello(u) {//funzione per aggiungere gli elemnti del carrello 
+  function creaCarrello(u) {//funzione per aggiungere gli elemnti del carrello nel localstorage
       var arrayCarrello = [];
       var carrelloUtente = new Carrello(u, arrayCarrello);
       newCarrello(carrelloUtente);//carrello in base al nome dell'utente
   }
-  async function newCarrello(carrelloUtente) {// gli passa carrello al json
+  async function newCarrello(carrelloUtente) {//dal localstorage gli passa al json//aggiunta nuovo carrello
       let response = await fetch("http://localhost:3000/carrello", {
         method: "POST",
         headers: {
@@ -128,3 +127,4 @@ function entra() {//al momento del click del log in l'utente si troverà nella p
  
 }
 
+//put sul carrello

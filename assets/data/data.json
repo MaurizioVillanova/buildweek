@@ -4,7 +4,7 @@
       "nome": "Maurizio",
       "cognome": "Villanova",
       "email": "mauriziovillanova5@gmail.com",
-      "password": "ciao",
+      "password": "mAURIZIO1998.",
       "id": 1
     }
   ],
@@ -84,12 +84,7 @@
     {
       "idUtente": "Maurizio",
       "arrayArticoli": [
-        "1",
-        "10",
-        "7",
-        "3",
-        "1",
-        "1"
+        "3"
       ],
       "id": 1
     }
