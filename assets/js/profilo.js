@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', stampaCarrello());
+window.addEventListener('DOMContentLoaded', stampaCarrello);//con gli adeventlistner non ci vogliono le farentesi perchè si attivano al momento del click
 var utente = localStorage.key['nome'];
 //se utente loggato modifica registra e login in nav bar inserendo saluto e logout
 if(localStorage.getItem('nome')){
@@ -13,6 +13,9 @@ if(localStorage.getItem('nome')){
 //CREO IL MIO CARELLO FISICO SULLA PAGINA PROFILO
 var tot = 0
 function stampaCarrello(){
+    let nome = localStorage.getItem('nome');
+document.getElementById('nomeutente').innerText += nome
+
 var valore =  JSON.parse(localStorage.getItem('carrello')); //  in modo da avere i valorei dell-array, mi serviranno i valori per compararli con l-id.Articolo.
 valore.forEach(valcar); //  mi servono tutti gli oggetti dell'articolo carrello. Se non lo faccio lui funziona solo se l'array ha un solo valore. Chiamo la funzione fuk 
 function valcar(valore) { //faccio partire la funzione valcar alla quale come parametro ho passato il l-array carrello

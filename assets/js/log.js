@@ -1,3 +1,13 @@
+function avviaCarusel() {
+  const carousel = new bootstrap.Carousel('#carouselExampleControls')
+  carousel.cycle();
+  document.getElementById('next').addEventListener('click', ()=>{
+    carousel.next();
+  });
+  document.getElementById('prev').addEventListener('click', ()=>{
+    carousel.prev();
+  })
+}
 var elenco = [];
 
 class Utente {
@@ -14,6 +24,7 @@ window.addEventListener("DOMContentLoaded", init());
 function init() {
   registra(); //al click della registrazione
   logIn(); //al click del login
+avviaCarusel();
 }
 
 // REGISTRAZIONE
